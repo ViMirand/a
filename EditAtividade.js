@@ -7,7 +7,7 @@ import { ptBR } from 'date-fns/locale';
 import TimePicker from '../components/horario';
 import PerfilStyle from '../styles/PerfilStyle';
 
-function EditAtividade({ route }) {
+function EditAtividadeE({ route }) {
     const { dia } = route.params;
 
     const [diaSelecionado, setDiaSelecionado] = useState(null);
@@ -69,7 +69,7 @@ function EditAtividade({ route }) {
             </View>
             <Text style={{ color: "#1D4582", fontSize: 20, width: "90%", alignSelf: 'center', textAlignVertical: "center", textAlign: 'center', backgroundColor: '#C8E5FF', borderTopLeftRadius: 20 }}>Atividades do dia</Text>
             {diaSelecionado ? (
-                <View style={{height: "20%", backgroundColor: '#C8E5FF', width: "90%", alignSelf: 'center', borderBottomRightRadius: 20}}>
+                <View style={{height: "30%", backgroundColor: '#C8E5FF', width: "90%", alignSelf: 'center', borderBottomRightRadius: 20}}>
                     <FlatList
                         data={diaSelecionado.atv} // Array de atividades para o dia selecionado
                         renderItem={renderAtividade} // Função para renderizar cada atividade
@@ -79,7 +79,7 @@ function EditAtividade({ route }) {
             ) : (
                 <Text style={{ padding: 20, textAlign: 'center' }}>Carregando...</Text>
             )}
-            <ScrollView style={{ width: "90%", alignSelf: "center", height: "20%" }}>
+            <ScrollView style={{ width: "90%", alignSelf: "center", height: "20%"}}>
                 <View style={AgendaStyle.containerInput}>
                     <Text style={AgendaStyle.txtInput}>Nova atividade:</Text>
                     <TextInput style={PerfilStyle.input} onChangeText={setAtividade1}></TextInput>
@@ -103,4 +103,4 @@ function EditAtividade({ route }) {
     );
 }
 
-export default EditAtividade;
+export default EditAtividadeE;

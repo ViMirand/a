@@ -1,13 +1,11 @@
 import React from 'react';
-import { FlatList, ScrollView, Text, View } from 'react-native';
+import { FlatList, ImageBackground, Text, View } from 'react-native';
 import AgendaStyle from '../styles/AgendaStyle';
 import IconCard from '../components/Dias';
-import OptionsButton from '../components/MiniMenu';
 import { format, startOfWeek, endOfWeek, addDays } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { useNavigation } from '@react-navigation/native';
-
-function AgendaEditar() {
+function AgendaEditarE() {
     const today = new Date();
     const startOfTheWeek = startOfWeek(today, { weekStartsOn: 1 });
     const endOfTheWeek = endOfWeek(today, { weekStartsOn: 1 });
@@ -34,7 +32,7 @@ function AgendaEditar() {
 
     const navigation = useNavigation();
     const handlePress = (day) => {
-        navigation.navigate('EditAtividade',  { dia: day })
+        navigation.navigate('EditAtividadeE',  { dia: day })
     };
 
     return (
@@ -60,4 +58,4 @@ function AgendaEditar() {
     );
 }
 
-export default AgendaEditar;
+export default AgendaEditarE;

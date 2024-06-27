@@ -5,7 +5,7 @@ import IconCard from '../components/Dias';
 import { format, startOfWeek, endOfWeek, addDays } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
-function AgendaExcluir() {
+function AgendaExcluirE() {
     const today = new Date();
     const startOfTheWeek = startOfWeek(today, { weekStartsOn: 1 });
     const endOfTheWeek = endOfWeek(today, { weekStartsOn: 1 });
@@ -70,4 +70,4 @@ function AgendaExcluir() {
     );
 }
 
-export default AgendaExcluir;
+export default AgendaExcluirE;
